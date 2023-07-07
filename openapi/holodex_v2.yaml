@@ -1,14 +1,83 @@
 openapi: 3.0.2
 info:
   title: Holodex/HoloAPI V2
-  version: '2.0'
-  description: Holodex Public API. Successor to the HoloAPI v1
-  license: {}
-  termsOfService: 'https://holodex.stoplight.io/docs/holodex/branches/main/8166fcec5dbe2-license'
-  contact:
-    url: 'https://discord.gg/A24AbzgvRJ'
+  version: "2.0"
+  description: |
+    Holodex Public API. Successor to the HoloAPI v1
+
+    Please consider joining our Discord Server for service downtime announcements
+
+    ![Discord Shield](https://discordapp.com/api/guilds/796190073271353385/widget.png?style=shield)
+
+    # Getting Started
+
+    ## Obtaining API Key
+
+    Access the API key menu from top right account icon -> `Account Settings`.
+
+    Use the API Key by adding it as a header to your requests using the Header `X-APIKEY`
+
+    ![image.png](https://stoplight.io/api/v1/projects/cHJqOjYxMjky/images/5OQDHXDC0OM)
+
+    <!-- ReDoc-Inject: <security-definitions> -->
+
+    ## Consuming the API
+
+    * Use a normal HTTP client like `fetch` or `axios`
+    * Community libraries
+    * C# - [Holodex.NET](https://github.com/EBro912/Holodex.NET) By All Toasters Toast Toast
+    * JS/TS - [holodex.js](https://github.com/HolodexNet/holodex.js) By Shiaupiau
+    * JS/TS - [holodex-api](https://github.com/HoloRes/holodex-api) By HoloRes
+    * Dart - [dart_holodex_api](https://github.com/getBoolean/dart_holodex_api) by getBoolean
+    * Elixir - [ex-holodex](https://github.com/DaniruKun/ex-holodex) By DaniruKun
+    * Python - [holodex](https://github.com/ombe1229/holodex) by ombe1229
+    * Swift - [HolodexKit](https://github.com/MarcoDotIO/HolodexKit) by MarcoDotIO
+    * Rust - [holodex-rs](https://lib.rs/crates/holodex) by anden3
+    ---
+
+    # LICENSE
+
+    ### 1. Introduction;
+
+    Thank you for using the Holodex API (“we”, “our” or “Holodex”) application programming interface(s) (“Holodex API”). By using the Holodex API you are agreeing to the terms and conditions contained below (“Terms”). Your license to use the Holodex API is conditioned upon your agreement and conformant with the Terms. We reserve the right to update and otherwise amend the Terms from time to time without notice.
+
+    **License grant**. Holodex hereby grants you a revocable, non-sublicenseable, terminable, limited license to use the Holodex API solely in accordance with the Terms.  Your license is automatically revoked if (i) you violate any of the Terms, (ii) we send a written notice of termination to you, or (iii) we disable your use of the Holodex API.
+
+    ### 2. Restrictions
+
+    **Adverse and Excessive Use.** You may not use the Holodex API in a manner that adversely impacts Holodex's systems, including but not limited to Holodex servers or other applications. Further we reserve the right to suspend, terminate or throttle your use of the Holodex API in the event your use is deemed excessive by Holodex.
+
+    **Keys.** You may not use multiple application API keys for the same use case or application.
+
+    **Monitoring.** You may not use or access the Holodex API for purposes or monitoring the availability, performance or functionality of any of Holodex's services or for any other benchmarking or competitive purposes.
+
+    **Third Party Access.** You may provide access to the API to third party developers (e.g. agencies or approved partners). You are responsible for ensuring that any third party to whom you provide access abides by the Terms. Holodex will have exclusive discretion to determine whether a particular use of an API key by a third party is acceptable. You are not permitted to share API keys to bypass Holodex restrictions. You are responsible for ensuring that any third party to whom you provide access abides by the Terms. Further, Holodex reserves the right to reject third party access to the API.
+
+    **Charging for Access.** You may not charge a premium for access to the Holodex API or any content derived from Holodex API
+
+    **Laws; Regulations; Privacy Policy.** Do not use the Holodex API in any manner or for any purpose that violates any law, regulation, code or any rights of any person or entity, including but not limited to intellectual privacy rights, rights of privacy, or rights of personality. Further, you must maintain a privacy policy that accurately reflects your use of the content accessed through the Holodex API.
+
+    ### 3. Support
+
+    Holodex may elect to provide you with support for the Holodex API (collectively, “Support”), in its sole discretion, and may terminate such Support at any time without notice to you. Holodex may change, suspend, or discontinue any aspect of the Holodex API at any time, including the availability of any Holodex API. Holodex may also impose limits on certain features and services or restrict your access to parts or all of the Holodex API without notice or liability.
+
+    ### 4. Disclaimer of Warranty
+
+    The Holodex API is provided “as is” and Holodex disclaims all warranties, conditions, or representations (express, implied, oral or written) with respect to the Holodex API and any support related thereto, including all warranties of merchantability, fitness for a particular purpose, non-infringement, non-interference, accuracy of data, and warranties arising from a course of dealing.
+
+    ### 5. Release and Waiver
+
+    To the maximum extent permitted by applicable law, you hereby release and waive all claims against Holodex, and its partners from any and all liability for claims, damages (actual and/or consequential), costs and expenses (including litigation costs and attorneys’ fees) of every kind and nature, arising from or in any way related to your use of the Holodex API. If you are a California resident, you waive your rights under California Civil Code 1542, which states, “A general release does not extend to claims which the creditor does not know or suspect to exist in his favor at the time of executing the release, which if known by him must have materially affected his settlement with the debtor.” You understand that any fact relating to any matter covered by this release may be found to be other than now believed to be true and you accept and assume the risk of such possible differences in fact. In addition, you expressly waive and relinquish any and all rights and benefits which you may have under any other state or federal statute or common law principle of similar effect, to the fullest extent permitted by law.
+
+    ### 6. Attribution
+
+    If You provide public access to the Holodex API and its material (including in modified form), You should provide:
+
+    1. Identification of Holodex, or provide a URI or hyperlink to Holodex wherever possible, plus optionally whenever applicable any others designated to receive attribution, in any reasonable manner requested by the Licensor (including pseudonym if designated);
+    2. provide somewhere in the source code, a notice that refers to this Public License;
+    3. provide somewhere in the source code, a notice that refers to the disclaimer of warranties;ink to Holodex wherever possible
 servers:
-  - url: 'https://holodex.net/api/v2'
+  - url: "https://holodex.net/api/v2"
     description: Prod Server
 components:
   schemas:
@@ -88,7 +157,7 @@ components:
             - clip
         topic_id:
           type: string
-          description: 'corresponds to a Topic ID, Videos of type `clip` cannot not have topic. Streams may or may not have topic.'
+          description: "corresponds to a Topic ID, Videos of type `clip` cannot not have topic. Streams may or may not have topic."
           example: minecraft
           nullable: true
         published_at:
@@ -98,7 +167,7 @@ components:
         available_at:
           type: string
           format: date-time
-          description: 'Takes on the first non-null value of end_actual, start_actual, start_scheduled, or published_at'
+          description: "Takes on the first non-null value of end_actual, start_actual, start_scheduled, or published_at"
         duration:
           type: integer
           description: Duration of the video in seconds
@@ -156,15 +225,15 @@ components:
           type: string
     VideoWithChannel:
       allOf:
-        - $ref: '#/components/schemas/Video'
+        - $ref: "#/components/schemas/Video"
         - type: object
           properties:
             channel:
-              $ref: '#/components/schemas/ChannelMin'
+              $ref: "#/components/schemas/ChannelMin"
     VideoFull:
       title: VideoFull
       allOf:
-        - $ref: '#/components/schemas/Video'
+        - $ref: "#/components/schemas/Video"
         - type: object
           properties:
             clips:
@@ -172,32 +241,32 @@ components:
               description: Included when 'includes' contains 'clips'
               nullable: true
               items:
-                $ref: '#/components/schemas/VideoWithChannel'
+                $ref: "#/components/schemas/VideoWithChannel"
             sources:
               type: array
               description: Included when 'includes' contains 'sources'
               nullable: true
               items:
-                $ref: '#/components/schemas/VideoWithChannel'
+                $ref: "#/components/schemas/VideoWithChannel"
             refers:
               type: array
               description: Included when 'includes' contains 'refers'
               nullable: true
               items:
-                $ref: '#/components/schemas/VideoWithChannel'
+                $ref: "#/components/schemas/VideoWithChannel"
             simulcasts:
               type: array
               description: Included when 'includes' contains 'simulcasts'
               nullable: true
               items:
-                $ref: '#/components/schemas/VideoWithChannel'
+                $ref: "#/components/schemas/VideoWithChannel"
             mentions:
               type: array
-              description: 'VTubers mentioned by this video, Included when ''includes'' contains ''mentions'''
+              description: "VTubers mentioned by this video, Included when 'includes' contains 'mentions'"
               nullable: true
               items:
                 allOf:
-                  - $ref: '#/components/schemas/ChannelMin'
+                  - $ref: "#/components/schemas/ChannelMin"
                   - type: object
                     properties:
                       org:
@@ -225,10 +294,10 @@ components:
       name: lang
       in: query
       required: false
-      description: 'A comma separated list of language codes to filter channels/clips, official streams do not follow this parameter'
+      description: "A comma separated list of language codes to filter channels/clips, official streams do not follow this parameter"
       schema:
         type: string
-        example: 'en,ja'
+        example: "en,ja"
         default: all
     videoChannelId:
       name: channel_id
@@ -285,7 +354,7 @@ components:
             - live_info
             - channel_stats
             - songs
-        example: 'live_info,clips'
+        example: "live_info,clips"
         type: array
       explode: false
     limit:
@@ -323,7 +392,7 @@ components:
       name: mentioned_channel_id
       in: query
       required: false
-      description: 'Filter by mentioned channel id, excludes itself. Generally used to find collabs/clips that include the requested channel'
+      description: "Filter by mentioned channel id, excludes itself. Generally used to find collabs/clips that include the requested channel"
       schema:
         type: string
     org:
@@ -340,7 +409,7 @@ components:
       schema:
         type: string
         default: <empty>
-      description: 'If paginated is set to any non-empty value, return an object with total, otherwise returns an array.'
+      description: "If paginated is set to any non-empty value, return an object with total, otherwise returns an array."
       allowEmptyValue: true
     channelId:
       name: channelId
@@ -370,7 +439,7 @@ components:
       required: false
       schema:
         type: string
-      description: 'A single Youtube Video ID. If Specified, only this video can be returned (may be filtered out by other conditions though)'
+      description: "A single Youtube Video ID. If Specified, only this video can be returned (may be filtered out by other conditions though)"
     channelType:
       name: type
       in: query
@@ -380,9 +449,9 @@ components:
         enum:
           - subber
           - vtuber
-      description: 'Type of Channel, whether it''s a vtuber or a subber. Leave unset to query all. '
+      description: "Type of Channel, whether it's a vtuber or a subber. Leave unset to query all. "
   securitySchemes:
-    STOPLIGHT:
+    ApiKeyAuth:
       name: X-APIKEY
       type: apiKey
       in: header
@@ -391,23 +460,23 @@ paths:
   /live:
     get:
       parameters:
-        - $ref: '#/components/parameters/videoChannelId'
-        - $ref: '#/components/parameters/videoStatus'
-        - $ref: '#/components/parameters/videoLang'
-        - $ref: '#/components/parameters/videoType'
-        - $ref: '#/components/parameters/videoTopicId'
-        - $ref: '#/components/parameters/videoInclude'
-        - $ref: '#/components/parameters/org'
-        - $ref: '#/components/parameters/videoMentionedChannelId'
-        - $ref: '#/components/parameters/videoSort'
-        - $ref: '#/components/parameters/order'
-        - $ref: '#/components/parameters/limit'
-        - $ref: '#/components/parameters/offset'
-        - $ref: '#/components/parameters/paginated'
-        - $ref: '#/components/parameters/videoMaxUpcomingHours'
-        - $ref: '#/components/parameters/videoIdentifier'
+        - $ref: "#/components/parameters/videoChannelId"
+        - $ref: "#/components/parameters/videoStatus"
+        - $ref: "#/components/parameters/videoLang"
+        - $ref: "#/components/parameters/videoType"
+        - $ref: "#/components/parameters/videoTopicId"
+        - $ref: "#/components/parameters/videoInclude"
+        - $ref: "#/components/parameters/org"
+        - $ref: "#/components/parameters/videoMentionedChannelId"
+        - $ref: "#/components/parameters/videoSort"
+        - $ref: "#/components/parameters/order"
+        - $ref: "#/components/parameters/limit"
+        - $ref: "#/components/parameters/offset"
+        - $ref: "#/components/parameters/paginated"
+        - $ref: "#/components/parameters/videoMaxUpcomingHours"
+        - $ref: "#/components/parameters/videoIdentifier"
       responses:
-        '200':
+        "200":
           description: OK
           content:
             application/json:
@@ -415,7 +484,7 @@ paths:
                 oneOf:
                   - type: array
                     items:
-                      $ref: '#/components/schemas/Video'
+                      $ref: "#/components/schemas/Video"
                   - type: object
                     properties:
                       total:
@@ -423,243 +492,243 @@ paths:
                       items:
                         type: array
                         items:
-                          $ref: '#/components/schemas/Video'
+                          $ref: "#/components/schemas/Video"
               examples:
                 example-1:
                   value:
-                    - available_at: '2021-05-13T19:59:59.000Z'
+                    - available_at: "2021-05-13T19:59:59.000Z"
                       channel:
                         english_name: Ninomae Ina’nis
                         id: UCMwGHR0BTZuLsmjY_NT5Pwg
                         name: Ninomae Ina'nis Ch. hololive-EN
-                        photo: 'https://yt3.ggpht.com/ytc/AAUvwng37V0l-NwF3bu7QA4XmOP5EZFwk5zJE-78OHP9=s800-c-k-c0x00ffffff-no-rj'
+                        photo: "https://yt3.ggpht.com/ytc/AAUvwng37V0l-NwF3bu7QA4XmOP5EZFwk5zJE-78OHP9=s800-c-k-c0x00ffffff-no-rj"
                         type: vtuber
                       duration: 0
                       id: 89rZZO10m0k
                       live_viewers: 12685
-                      published_at: '2021-05-13T13:47:09.000Z'
-                      start_actual: '2021-05-13T19:59:59.000Z'
-                      start_scheduled: '2021-05-13T20:00:00.000Z'
+                      published_at: "2021-05-13T13:47:09.000Z"
+                      start_actual: "2021-05-13T19:59:59.000Z"
+                      start_scheduled: "2021-05-13T20:00:00.000Z"
                       status: live
                       title: 【Minecraft】 waHHHH
                       topic_id: minecraft
                       type: stream
-                    - available_at: '2021-05-13T23:00:00.000Z'
+                    - available_at: "2021-05-13T23:00:00.000Z"
                       channel:
                         english_name: Kishido Temma
                         id: UCGNI4MENvnsymYjKiZwv9eg
                         name: Temma Ch. 岸堂天真
-                        photo: 'https://yt3.ggpht.com/ytc/AAUvwnjek7CeN83n90k6OaFaezz0vdgXe5RYaxl_nPaX=s800-c-k-c0x00ffffff-no-rj'
+                        photo: "https://yt3.ggpht.com/ytc/AAUvwnjek7CeN83n90k6OaFaezz0vdgXe5RYaxl_nPaX=s800-c-k-c0x00ffffff-no-rj"
                         type: vtuber
                       duration: 0
                       id: CPD_nW0rcnk
-                      published_at: '2021-05-13T16:48:21.000Z'
-                      start_scheduled: '2021-05-13T23:00:00.000Z'
+                      published_at: "2021-05-13T16:48:21.000Z"
+                      start_scheduled: "2021-05-13T23:00:00.000Z"
                       status: upcoming
                       title: 【STUDY】New Studying EN Application!!新しい英語勉強ソフトやってみる【岸堂天真/ホロスターズ】
                       topic_id: english_only
                       type: stream
-                    - available_at: '2021-05-14T03:00:00.000Z'
+                    - available_at: "2021-05-14T03:00:00.000Z"
                       channel:
                         english_name: Shirogane Noel
                         id: UCdyqAaZDKHXg4Ahi7VENThQ
                         name: Noel Ch. 白銀ノエル
-                        photo: 'https://yt3.ggpht.com/ytc/AAUvwnijLF2X1YBVQo3rClt7ub29cYM7OzpmRmliaGbw=s800-c-k-c0x00ffffff-no-rj'
+                        photo: "https://yt3.ggpht.com/ytc/AAUvwnijLF2X1YBVQo3rClt7ub29cYM7OzpmRmliaGbw=s800-c-k-c0x00ffffff-no-rj"
                         type: vtuber
                       duration: 0
                       id: uAGM8d4-X2U
-                      published_at: '2021-05-13T17:17:06.000Z'
-                      start_scheduled: '2021-05-14T03:00:00.000Z'
+                      published_at: "2021-05-13T17:17:06.000Z"
+                      start_scheduled: "2021-05-14T03:00:00.000Z"
                       status: upcoming
                       title: "Let’s study English together\U0001F4DD超絶久々のDuolingo！【白銀ノエル/ホロライブ】"
                       topic_id: english_only
                       type: stream
-                    - available_at: '2021-05-14T10:00:00.000Z'
+                    - available_at: "2021-05-14T10:00:00.000Z"
                       channel:
                         english_name: Kanade Izuru
                         id: UCZgOv3YDEs-ZnZWDYVwJdmA
                         name: Izuru Ch. 奏手イヅル
-                        photo: 'https://yt3.ggpht.com/ytc/AAUvwnhNA5NPSYpFiMba_lmeNqYZJ4bVtZKf-5g5YlxGcA=s800-c-k-c0x00ffffff-no-rj'
+                        photo: "https://yt3.ggpht.com/ytc/AAUvwnhNA5NPSYpFiMba_lmeNqYZJ4bVtZKf-5g5YlxGcA=s800-c-k-c0x00ffffff-no-rj"
                         type: vtuber
                       duration: 197
                       id: d0NXC7POoUs
-                      published_at: '2021-05-12T03:04:58.000Z'
-                      start_scheduled: '2021-05-14T10:00:00.000Z'
+                      published_at: "2021-05-12T03:04:58.000Z"
+                      start_scheduled: "2021-05-14T10:00:00.000Z"
                       status: upcoming
                       title: 【歌ってみた】ジャガーノート【奏手イヅル/アステル・レダ】
                       topic_id: singing
                       type: stream
-                    - available_at: '2021-05-14T10:00:00.000Z'
+                    - available_at: "2021-05-14T10:00:00.000Z"
                       channel:
                         english_name: Sakura Miko
                         id: UC-hM6YJuNYVAmUWxeIr9FeA
                         name: Miko Ch. さくらみこ
-                        photo: 'https://yt3.ggpht.com/ytc/AAUvwniR0ijvAPNICEVzF8Pz0kSkuhBLKXd31oc5yO-0AQ=s800-c-k-c0x00ffffff-no-rj'
+                        photo: "https://yt3.ggpht.com/ytc/AAUvwniR0ijvAPNICEVzF8Pz0kSkuhBLKXd31oc5yO-0AQ=s800-c-k-c0x00ffffff-no-rj"
                         type: vtuber
                       duration: 0
                       id: BLDvnztpcXM
-                      published_at: '2021-05-13T18:04:52.000Z'
-                      start_scheduled: '2021-05-14T10:00:00.000Z'
+                      published_at: "2021-05-13T18:04:52.000Z"
+                      start_scheduled: "2021-05-14T10:00:00.000Z"
                       status: upcoming
                       title: 【  】よていち！【ホロライブ/さくらみこ】
                       type: stream
-                    - available_at: '2021-05-14T11:00:00.000Z'
+                    - available_at: "2021-05-14T11:00:00.000Z"
                       channel:
                         english_name: Oozora Subaru
                         id: UCvzGlP9oQwU--Y0r9id_jnA
                         name: Subaru Ch. 大空スバル
-                        photo: 'https://yt3.ggpht.com/ytc/AAUvwniCgko15I_x5bYWm0G2vnf5hZqD5hLOtLEDw0Na=s800-c-k-c0x00ffffff-no-rj'
+                        photo: "https://yt3.ggpht.com/ytc/AAUvwniCgko15I_x5bYWm0G2vnf5hZqD5hLOtLEDw0Na=s800-c-k-c0x00ffffff-no-rj"
                         type: vtuber
                       duration: 0
                       id: pGdQB7nPOi8
-                      published_at: '2021-05-13T10:00:39.000Z'
-                      start_scheduled: '2021-05-14T11:00:00.000Z'
+                      published_at: "2021-05-13T10:00:39.000Z"
+                      start_scheduled: "2021-05-14T11:00:00.000Z"
                       status: upcoming
                       title: 【】単発クイズゲー【】
                       type: stream
-                    - available_at: '2021-05-14T12:00:00.000Z'
+                    - available_at: "2021-05-14T12:00:00.000Z"
                       channel:
                         english_name: Natsuiro Matsuri
                         id: UCQ0UDLQCjY0rmuxCDE38FGg
                         name: Matsuri Channel 夏色まつり
-                        photo: 'https://yt3.ggpht.com/ytc/AAUvwni8cjtyc08E7rocvO9_gR1b5BhO1O6O1VreDxMW=s800-c-k-c0x00ffffff-no-rj'
+                        photo: "https://yt3.ggpht.com/ytc/AAUvwni8cjtyc08E7rocvO9_gR1b5BhO1O6O1VreDxMW=s800-c-k-c0x00ffffff-no-rj"
                         type: vtuber
                       duration: 0
                       id: tpVtbVVBnSs
-                      published_at: '2021-05-13T20:01:50.000Z'
-                      start_scheduled: '2021-05-14T12:00:00.000Z'
+                      published_at: "2021-05-13T20:01:50.000Z"
+                      start_scheduled: "2021-05-14T12:00:00.000Z"
                       status: upcoming
                       title: 【APEX】うるか幼稚園まゆげ組/CRカスタム#6【ホロライブ/夏色まつり】
                       topic_id: apex
                       type: stream
-                    - available_at: '2021-05-14T12:00:00.000Z'
+                    - available_at: "2021-05-14T12:00:00.000Z"
                       channel:
                         english_name: Arurandeisu
                         id: UCKeAhJvy8zgXWbh9duVjIaQ
                         name: Aruran Ch. アルランディス
-                        photo: 'https://yt3.ggpht.com/ytc/AAUvwnjIqTphTjcWJLTftb3ppGk71CVwCYaH2M5KkmZOAQ=s800-c-k-c0x00ffffff-no-rj'
+                        photo: "https://yt3.ggpht.com/ytc/AAUvwnjIqTphTjcWJLTftb3ppGk71CVwCYaH2M5KkmZOAQ=s800-c-k-c0x00ffffff-no-rj"
                         type: vtuber
                       duration: 0
                       id: wyJTO7CXOHc
-                      published_at: '2021-05-13T12:10:17.000Z'
-                      start_scheduled: '2021-05-14T12:00:00.000Z'
+                      published_at: "2021-05-13T12:10:17.000Z"
+                      start_scheduled: "2021-05-14T12:00:00.000Z"
                       status: upcoming
                       title: 【＃アラボ 】その筋トレ目的に合わせて考えてますか!? -ARN's Lab-【アルランディス/ホロスターズ】
                       type: stream
-                    - available_at: '2021-05-14T12:00:00.000Z'
+                    - available_at: "2021-05-14T12:00:00.000Z"
                       channel:
                         english_name: Shishiro Botan
                         id: UCUKD-uaobj9jiqB-VXt71mA
                         name: Botan Ch.獅白ぼたん
-                        photo: 'https://yt3.ggpht.com/ytc/AAUvwngRC-JqguPnj9ljVH3UulyfdlyQzLYzLeSrhvD6=s800-c-k-c0x00ffffff-no-rj'
+                        photo: "https://yt3.ggpht.com/ytc/AAUvwngRC-JqguPnj9ljVH3UulyfdlyQzLYzLeSrhvD6=s800-c-k-c0x00ffffff-no-rj"
                         type: vtuber
                       duration: 0
                       id: X1xXG2qIJWg
-                      published_at: '2021-05-13T19:21:29.000Z'
-                      start_scheduled: '2021-05-14T12:00:00.000Z'
+                      published_at: "2021-05-13T19:21:29.000Z"
+                      start_scheduled: "2021-05-14T12:00:00.000Z"
                       status: upcoming
                       title: 【バイオハザードヴィレッジ】イーサンと次のステージへ―Resident Evil Village【獅白ぼたん/ホロライブ】
                       topic_id: residentevil
                       type: stream
-                    - available_at: '2021-05-14T13:00:00.000Z'
+                    - available_at: "2021-05-14T13:00:00.000Z"
                       channel:
                         english_name: Mori Calliope
                         id: UCL_qhgtOy0dy1Agp8vkySQg
                         name: Mori Calliope Ch. hololive-EN
-                        photo: 'https://yt3.ggpht.com/ytc/AAUvwniY6zzRc3nUO1zLCBlmaAxeLNDoVWjw0hKGztvJ=s800-c-k-c0x00ffffff-no-rj-mo'
+                        photo: "https://yt3.ggpht.com/ytc/AAUvwniY6zzRc3nUO1zLCBlmaAxeLNDoVWjw0hKGztvJ=s800-c-k-c0x00ffffff-no-rj-mo"
                         type: vtuber
                       duration: 0
                       id: _F2ITnPX7lg
-                      published_at: '2021-05-13T14:01:53.000Z'
-                      start_scheduled: '2021-05-14T13:00:00.000Z'
+                      published_at: "2021-05-13T14:01:53.000Z"
+                      start_scheduled: "2021-05-14T13:00:00.000Z"
                       status: upcoming
-                      title: '【MINECRAFT】 Cabin Barbecue Vibes, Dead Beats! #hololiveEnglish #holoMyth'
+                      title: "【MINECRAFT】 Cabin Barbecue Vibes, Dead Beats! #hololiveEnglish #holoMyth"
                       topic_id: minecraft
                       type: stream
-                    - available_at: '2021-05-14T13:00:00.000Z'
+                    - available_at: "2021-05-14T13:00:00.000Z"
                       channel:
                         english_name: Sakura Miko
                         id: UC-hM6YJuNYVAmUWxeIr9FeA
                         name: Miko Ch. さくらみこ
-                        photo: 'https://yt3.ggpht.com/ytc/AAUvwniR0ijvAPNICEVzF8Pz0kSkuhBLKXd31oc5yO-0AQ=s800-c-k-c0x00ffffff-no-rj'
+                        photo: "https://yt3.ggpht.com/ytc/AAUvwniR0ijvAPNICEVzF8Pz0kSkuhBLKXd31oc5yO-0AQ=s800-c-k-c0x00ffffff-no-rj"
                         type: vtuber
                       duration: 0
                       id: j-Y0xgqNXWc
-                      published_at: '2021-05-13T18:10:37.000Z'
-                      start_scheduled: '2021-05-14T13:00:00.000Z'
+                      published_at: "2021-05-13T18:10:37.000Z"
+                      start_scheduled: "2021-05-14T13:00:00.000Z"
                       status: upcoming
                       title: 【 ウマ娘プリティーダービー 】【ホロライブ/さくらみこ】
                       topic_id: umamusume
                       type: stream
-                    - available_at: '2021-05-14T13:00:00.000Z'
+                    - available_at: "2021-05-14T13:00:00.000Z"
                       channel:
                         english_name: Rikkaroid
                         id: UC9mf_ZVpouoILRY9NUIaK-w
                         name: Rikka ch.律可
-                        photo: 'https://yt3.ggpht.com/ytc/AAUvwnghUH22DLP22EHC3PZP7xXzJFd7qS_scK95WhaQ=s800-c-k-c0x00ffffff-no-rj'
+                        photo: "https://yt3.ggpht.com/ytc/AAUvwnghUH22DLP22EHC3PZP7xXzJFd7qS_scK95WhaQ=s800-c-k-c0x00ffffff-no-rj"
                         type: vtuber
                       duration: 0
                       id: q2s5d8A_pm0
-                      published_at: '2021-05-12T10:47:10.000Z'
-                      start_scheduled: '2021-05-14T13:00:00.000Z'
+                      published_at: "2021-05-12T10:47:10.000Z"
+                      start_scheduled: "2021-05-14T13:00:00.000Z"
                       status: upcoming
-                      title: '#16【RiTunes Labo】生セッション歌枠：ゲスト『miro』【律可/ホロスターズ 】#りちゅらぼ'
+                      title: "#16【RiTunes Labo】生セッション歌枠：ゲスト『miro』【律可/ホロスターズ 】#りちゅらぼ"
                       topic_id: singing
                       type: stream
-                    - available_at: '2021-05-14T14:00:00.000Z'
+                    - available_at: "2021-05-14T14:00:00.000Z"
                       channel:
                         english_name: Shiranui Flare
                         id: UCvInZx9h3jC2JzsIzoOebWg
                         name: Flare Ch. 不知火フレア
-                        photo: 'https://yt3.ggpht.com/ytc/AAUvwngtkUgGkgWTz57Er3GSzuMUR07HISM_yDhKQFnR_A=s800-c-k-c0x00ffffff-no-rj'
+                        photo: "https://yt3.ggpht.com/ytc/AAUvwngtkUgGkgWTz57Er3GSzuMUR07HISM_yDhKQFnR_A=s800-c-k-c0x00ffffff-no-rj"
                         type: vtuber
                       duration: 0
                       id: q-pIKINMwig
-                      published_at: '2021-05-13T21:58:01.000Z'
-                      start_scheduled: '2021-05-14T14:00:00.000Z'
+                      published_at: "2021-05-13T21:58:01.000Z"
+                      start_scheduled: "2021-05-14T14:00:00.000Z"
                       status: upcoming
                       title: 【GTAV】感動のフィナーレ・・・？The emotional finale...?【ホロライブ/不知火フレア】
                       topic_id: gta5
                       type: stream
-                    - available_at: '2021-05-14T14:30:00.000Z'
+                    - available_at: "2021-05-14T14:30:00.000Z"
                       channel:
                         english_name: Tokino Sora
                         id: UCp6993wxpyDPHUpavwDFqgg
                         name: SoraCh. ときのそらチャンネル
-                        photo: 'https://yt3.ggpht.com/ytc/AAUvwngZmr_qbKhGIvHaHwLRmKhKxdeFfM7ZbK316vFNSw=s800-c-k-c0x00ffffff-no-rj'
+                        photo: "https://yt3.ggpht.com/ytc/AAUvwngZmr_qbKhGIvHaHwLRmKhKxdeFfM7ZbK316vFNSw=s800-c-k-c0x00ffffff-no-rj"
                         type: vtuber
                       duration: 0
                       id: T4FmAguGOI0
-                      published_at: '2021-05-13T15:18:16.000Z'
-                      start_scheduled: '2021-05-14T14:30:00.000Z'
+                      published_at: "2021-05-13T15:18:16.000Z"
+                      start_scheduled: "2021-05-14T14:30:00.000Z"
                       status: upcoming
                       title: 【誕生日】カウントダウンするよぬんぬん！！【＃ときのそら誕生日2021】
                       type: stream
-                    - available_at: '2021-05-14T15:00:00.000Z'
+                    - available_at: "2021-05-14T15:00:00.000Z"
                       channel:
                         english_name: Himemori Luna
                         id: UCa9Y57gfeY0Zro_noHRVrnw
                         name: Luna Ch. 姫森ルーナ
-                        photo: 'https://yt3.ggpht.com/ytc/AAUvwngV89Ez1--ZzNX3jCA082Mt-JGRZEXZ1lmW876a-w=s800-c-k-c0x00ffffff-no-rj'
+                        photo: "https://yt3.ggpht.com/ytc/AAUvwngV89Ez1--ZzNX3jCA082Mt-JGRZEXZ1lmW876a-w=s800-c-k-c0x00ffffff-no-rj"
                         type: vtuber
                       duration: 0
                       id: IYhUfwJuGEo
-                      published_at: '2021-05-13T17:26:21.000Z'
-                      start_scheduled: '2021-05-14T15:00:00.000Z'
+                      published_at: "2021-05-13T17:26:21.000Z"
+                      start_scheduled: "2021-05-14T15:00:00.000Z"
                       status: upcoming
                       title: "【 酒と肴 】高級クラブルーナ\U0001F378オープンするのらっ！✨(・o・\U0001F36C)【姫森ルーナ/ホロライブ】"
                       type: stream
-                    - available_at: '2021-05-14T17:00:00.000Z'
+                    - available_at: "2021-05-14T17:00:00.000Z"
                       channel:
                         english_name: Natsuiro Matsuri
                         id: UCQ0UDLQCjY0rmuxCDE38FGg
                         name: Matsuri Channel 夏色まつり
-                        photo: 'https://yt3.ggpht.com/ytc/AAUvwni8cjtyc08E7rocvO9_gR1b5BhO1O6O1VreDxMW=s800-c-k-c0x00ffffff-no-rj'
+                        photo: "https://yt3.ggpht.com/ytc/AAUvwni8cjtyc08E7rocvO9_gR1b5BhO1O6O1VreDxMW=s800-c-k-c0x00ffffff-no-rj"
                         type: vtuber
                       duration: 0
                       id: jDANZuw6IDM
-                      published_at: '2021-05-12T23:53:59.000Z'
-                      start_scheduled: '2021-05-14T17:00:00.000Z'
+                      published_at: "2021-05-12T23:53:59.000Z"
+                      start_scheduled: "2021-05-14T17:00:00.000Z"
                       status: upcoming
                       title: 【Minecraft】睡眠導入 / ムーンハウス作成！【ホロライブ/夏色まつり】
                       topic_id: minecraft
@@ -677,101 +746,101 @@ paths:
             max_upcoming_hours: 48,
             limit: 9999,
             include: live_info + query's include
-          
+
   /videos:
     get:
       parameters:
-        - $ref: '#/components/parameters/videoChannelId'
-        - $ref: '#/components/parameters/videoStatus'
-        - $ref: '#/components/parameters/videoLang'
-        - $ref: '#/components/parameters/videoType'
-        - $ref: '#/components/parameters/videoTopicId'
-        - $ref: '#/components/parameters/videoInclude'
-        - $ref: '#/components/parameters/org'
-        - $ref: '#/components/parameters/videoMentionedChannelId'
-        - $ref: '#/components/parameters/videoSort'
-        - $ref: '#/components/parameters/order'
-        - $ref: '#/components/parameters/limit'
-        - $ref: '#/components/parameters/offset'
-        - $ref: '#/components/parameters/paginated'
-        - $ref: '#/components/parameters/videoMaxUpcomingHours'
-        - $ref: '#/components/parameters/videoIdentifier'
+        - $ref: "#/components/parameters/videoChannelId"
+        - $ref: "#/components/parameters/videoStatus"
+        - $ref: "#/components/parameters/videoLang"
+        - $ref: "#/components/parameters/videoType"
+        - $ref: "#/components/parameters/videoTopicId"
+        - $ref: "#/components/parameters/videoInclude"
+        - $ref: "#/components/parameters/org"
+        - $ref: "#/components/parameters/videoMentionedChannelId"
+        - $ref: "#/components/parameters/videoSort"
+        - $ref: "#/components/parameters/order"
+        - $ref: "#/components/parameters/limit"
+        - $ref: "#/components/parameters/offset"
+        - $ref: "#/components/parameters/paginated"
+        - $ref: "#/components/parameters/videoMaxUpcomingHours"
+        - $ref: "#/components/parameters/videoIdentifier"
         - schema:
             type: string
           in: query
           name: from
-          description: 'ISO8601 Date String for minimum `available_at`. (`available_at` is the most accurate timestamp of when a video has gone live or became viewable - it is the first non null value of the `start_actual`, `start_scheduled` or `published_at` fields)'
+          description: "ISO8601 Date String for minimum `available_at`. (`available_at` is the most accurate timestamp of when a video has gone live or became viewable - it is the first non null value of the `start_actual`, `start_scheduled` or `published_at` fields)"
         - schema:
             type: string
           in: query
           name: to
           description: ISO8601 Date String for maximum `available_at`
       responses:
-        '200':
+        "200":
           description: OK
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/VideoFull'
+                $ref: "#/components/schemas/VideoFull"
       summary: Query Videos
       description: |-
         Pretty much everything you need. This is the most 'vanilla' variant with almost no preset values, and `/channels/{channelId}/{type}` and `/live` endpoints both use the same query structure but provision default values differently for some of the query params.
 
-        Not as powerful at searching arbitrary text as the Search API (currently not documented/available). 
-  '/channels/{channelId}':
+        Not as powerful at searching arbitrary text as the Search API (currently not documented/available).
+  "/channels/{channelId}":
     get:
-      description: ''
+      description: ""
       operationId: get-v2-channels-channelId
       parameters: []
       responses:
-        '200':
+        "200":
           content:
             application/json:
               examples:
                 example-1:
                   value:
-                    banner: 'https://yt3.ggpht.com/U2KIthUFXtUHa0j5kosrZ1IHTr2sSRZ0nC7wh3_HrLF4a35Zp4-2TzqRqO8HJE04w5-BwW73fg'
+                    banner: "https://yt3.ggpht.com/U2KIthUFXtUHa0j5kosrZ1IHTr2sSRZ0nC7wh3_HrLF4a35Zp4-2TzqRqO8HJE04w5-BwW73fg"
                     clip_count: null
                     comments_crawled_at: null
-                    crawled_at: '2021-05-13T20:44:14.001Z'
-                    created_at: '2021-04-23T07:21:00.045Z'
+                    crawled_at: "2021-05-13T20:44:14.001Z"
+                    created_at: "2021-04-23T07:21:00.045Z"
                     description: |
                       I make translated clips from Hololive and Vtubers.
                     english_name: null
                     id: UC4Fh9OcvIEWK405Cvg25jDw
                     inactive: false
                     lang: en
-                    name: 'Sushi [Hololive and Vtubers]'
+                    name: "Sushi [Hololive and Vtubers]"
                     org: null
-                    photo: 'https://yt3.ggpht.com/ytc/AAUvwnjZ3i5csnFMZqorfAHE7JUuD8VdWJDcJbwt2YiK=s800-c-k-c0x00ffffff-no-rj'
-                    published_at: '2020-05-26T06:35:52.412Z'
+                    photo: "https://yt3.ggpht.com/ytc/AAUvwnjZ3i5csnFMZqorfAHE7JUuD8VdWJDcJbwt2YiK=s800-c-k-c0x00ffffff-no-rj"
+                    published_at: "2020-05-26T06:35:52.412Z"
                     suborg: null
-                    subscriber_count: '163000'
-                    thumbnail: 'https://yt3.ggpht.com/ytc/AAUvwnjZ3i5csnFMZqorfAHE7JUuD8VdWJDcJbwt2YiK=s88-c-k-c0x00ffffff-no-rj'
+                    subscriber_count: "163000"
+                    thumbnail: "https://yt3.ggpht.com/ytc/AAUvwnjZ3i5csnFMZqorfAHE7JUuD8VdWJDcJbwt2YiK=s88-c-k-c0x00ffffff-no-rj"
                     twitter: null
                     type: subber
-                    updated_at: '2021-05-13T15:00:05.766Z'
-                    video_count: '1586'
-                    view_count: '135584366'
+                    updated_at: "2021-05-13T15:00:05.766Z"
+                    video_count: "1586"
+                    view_count: "135584366"
                     yt_uploads_id: UU4Fh9OcvIEWK405Cvg25jDw
               schema:
-                $ref: '#/components/schemas/Channel'
+                $ref: "#/components/schemas/Channel"
           description: Success
       summary: Get Channel Information
     parameters:
-      - $ref: '#/components/parameters/channelId'
-  '/channels/{channelId}/{type}':
+      - $ref: "#/components/parameters/channelId"
+  "/channels/{channelId}/{type}":
     get:
-      description: 'A simplified endpoint for access channel specific data. If you want more customization, the same result can be obtained by calling the `/videos` endpoint.'
+      description: "A simplified endpoint for access channel specific data. If you want more customization, the same result can be obtained by calling the `/videos` endpoint."
       operationId: get-v2-channels-channelId-clips
       parameters:
-        - $ref: '#/components/parameters/videoLang'
-        - $ref: '#/components/parameters/videoInclude'
-        - $ref: '#/components/parameters/limit'
-        - $ref: '#/components/parameters/offset'
-        - $ref: '#/components/parameters/paginated'
+        - $ref: "#/components/parameters/videoLang"
+        - $ref: "#/components/parameters/videoInclude"
+        - $ref: "#/components/parameters/limit"
+        - $ref: "#/components/parameters/offset"
+        - $ref: "#/components/parameters/paginated"
       responses:
-        '200':
+        "200":
           description: Success
           content:
             application/json:
@@ -784,13 +853,13 @@ paths:
                       items:
                         type: array
                         items:
-                          $ref: '#/components/schemas/VideoFull'
+                          $ref: "#/components/schemas/VideoFull"
                   - type: array
                     items:
-                      $ref: '#/components/schemas/VideoFull'
+                      $ref: "#/components/schemas/VideoFull"
       summary: Query Videos Related to Channel
     parameters:
-      - $ref: '#/components/parameters/channelId'
+      - $ref: "#/components/parameters/channelId"
       - schema:
           type: string
           enum:
@@ -800,20 +869,20 @@ paths:
         name: type
         in: path
         required: true
-        description: 'The type of video resource to fetch. Clips finds clip videos of a `vtuber` channel, Video finds the `channelId` channel''s uploads, and collabs finds videos uploaded by other channels that mention this `channelId`'
+        description: "The type of video resource to fetch. Clips finds clip videos of a `vtuber` channel, Video finds the `channelId` channel's uploads, and collabs finds videos uploaded by other channels that mention this `channelId`"
   /users/live:
     get:
       summary: Quickly Access Live / Upcoming for a set of Channels
       tags: []
       responses:
-        '200':
+        "200":
           description: OK
           content:
             application/json:
               schema:
                 type: array
                 items:
-                  $ref: '#/components/schemas/Video'
+                  $ref: "#/components/schemas/Video"
       operationId: get-cached-live
       parameters:
         - schema:
@@ -826,40 +895,40 @@ paths:
 
         We recommends using this if you have a fixed set of channel IDs to look up status for.
     parameters: []
-  '/videos/{videoId}':
+  "/videos/{videoId}":
     parameters:
-      - $ref: '#/components/parameters/videoId'
+      - $ref: "#/components/parameters/videoId"
     get:
       summary: Get a single Video's metadata
       tags: []
       responses:
-        '200':
+        "200":
           description: OK
           content:
             application/json:
               schema:
                 allOf:
-                  - $ref: '#/components/schemas/VideoFull'
+                  - $ref: "#/components/schemas/VideoFull"
                   - type: object
                     properties:
                       comments:
                         type: array
                         description: Comments are only returned if c === '1'
                         items:
-                          $ref: '#/components/schemas/Comment'
+                          $ref: "#/components/schemas/Comment"
                       recommendations:
                         type: array
                         items:
-                          $ref: '#/components/schemas/Video'
+                          $ref: "#/components/schemas/Video"
       operationId: get-videos-videoId
       parameters:
-        - $ref: '#/components/parameters/videoLang'
+        - $ref: "#/components/parameters/videoLang"
         - schema:
             type: string
-            example: '1'
+            example: "1"
             enum:
-              - '1'
-              - '0'
+              - "1"
+              - "0"
           in: query
           name: c
           description: if `1` then will reply with timestamp comments for this video
@@ -874,7 +943,7 @@ paths:
       summary: List Channels
       tags: []
       responses:
-        '200':
+        "200":
           description: OK
           content:
             application/json:
@@ -882,30 +951,30 @@ paths:
                 type: array
                 description: Array of Channels up to `limit` count.
                 items:
-                  $ref: '#/components/schemas/Channel'
+                  $ref: "#/components/schemas/Channel"
       operationId: get-channels
-      description: ''
+      description: ""
       parameters:
-        - $ref: '#/components/parameters/channelType'
-        - $ref: '#/components/parameters/offset'
-        - $ref: '#/components/parameters/limit'
+        - $ref: "#/components/parameters/channelType"
+        - $ref: "#/components/parameters/offset"
+        - $ref: "#/components/parameters/limit"
         - in: query
           name: org
-          description: 'If set, filter for Vtuber belonging to a specific org'
+          description: "If set, filter for Vtuber belonging to a specific org"
           schema:
             example: Hololive
             type: string
         - schema:
             type: string
-            example: 'en,ja,zh'
+            example: "en,ja,zh"
           in: query
           name: lang
-          description: 'Comma separated list of languages. Language is a property of Channel, so only Channels satisfying the language will be returned. Leave empty to search for Vtubers and/or all clippers.'
+          description: "Comma separated list of languages. Language is a property of Channel, so only Channels satisfying the language will be returned. Leave empty to search for Vtubers and/or all clippers."
         - schema:
             type: string
           in: query
           name: sort
-          description: 'Column to sort on, leave default to use ''org'' as sort. Any first level property of channel should work here.'
+          description: "Column to sort on, leave default to use 'org' as sort. Any first level property of channel should work here."
         - schema:
             type: string
             enum:
@@ -913,14 +982,14 @@ paths:
               - desc
           in: query
           name: order
-          description: 'ASC or DESC order, default asc.'
+          description: "ASC or DESC order, default asc."
     parameters: []
   /search/videoSearch:
     post:
-      summary: ''
+      summary: ""
       operationId: post-search-videoSearch
       responses:
-        '200':
+        "200":
           description: OK
           content:
             application/json:
@@ -928,7 +997,7 @@ paths:
                 oneOf:
                   - type: array
                     items:
-                      $ref: '#/components/schemas/VideoWithChannel'
+                      $ref: "#/components/schemas/VideoWithChannel"
                   - type: object
                     properties:
                       total:
@@ -936,16 +1005,16 @@ paths:
                       items:
                         type: array
                         items:
-                          $ref: '#/components/schemas/VideoWithChannel'
+                          $ref: "#/components/schemas/VideoWithChannel"
       description: |-
         Flexible endpoint to search for videos fufilling multiple conditions. Descriptions with "any" implies an OR condition, and "all" implies a AND condition.
 
-        Searching for topics and clips is not supported, because clips do not contain topic_ids 
+        Searching for topics and clips is not supported, because clips do not contain topic_ids
       requestBody:
         content:
           application/json:
             schema:
-              description: ''
+              description: ""
               type: object
               x-examples:
                 example-1:
@@ -979,7 +1048,7 @@ paths:
                   default: newest
                 lang:
                   type: array
-                  description: 'If set, will filter clips to only show clips with these langs + all vtuber streams (provided `target` is not set to filter out streams)'
+                  description: "If set, will filter clips to only show clips with these langs + all vtuber streams (provided `target` is not set to filter out streams)"
                   example:
                     - en
                     - ja
@@ -1026,7 +1095,7 @@ paths:
                     type: string
                 org:
                   type: array
-                  description: 'Videos of channels in any of the specified orgs, or clips that involve a channel in the specified org.'
+                  description: "Videos of channels in any of the specified orgs, or clips that involve a channel in the specified org."
                   example:
                     - Hololive
                     - Nijisanji
@@ -1034,7 +1103,7 @@ paths:
                     type: string
                 paginated:
                   type: boolean
-                  description: 'If set at all, responds with total and items wrapping the array of objects'
+                  description: "If set at all, responds with total and items wrapping the array of objects"
                 offset:
                   type: number
                 limit:
@@ -1067,13 +1136,13 @@ paths:
                   paginated: true
                   offset: 0
                   limit: 30
-        description: ''
+        description: ""
   /search/commentSearch:
     post:
-      summary: ''
+      summary: ""
       operationId: post-search-commentSearch
       responses:
-        '200':
+        "200":
           description: OK
           content:
             application/json:
@@ -1082,12 +1151,12 @@ paths:
                   - type: array
                     items:
                       allOf:
-                        - $ref: '#/components/schemas/VideoWithChannel'
+                        - $ref: "#/components/schemas/VideoWithChannel"
                         - properties:
                             comments:
                               type: array
                               items:
-                                $ref: '#/components/schemas/Comment'
+                                $ref: "#/components/schemas/Comment"
                           type: object
                   - type: object
                     properties:
@@ -1097,13 +1166,13 @@ paths:
                         type: array
                         items:
                           allOf:
-                            - $ref: '#/components/schemas/VideoWithChannel'
+                            - $ref: "#/components/schemas/VideoWithChannel"
                             - type: object
                               properties:
                                 comments:
                                   type: array
                                   items:
-                                    $ref: '#/components/schemas/Comment'
+                                    $ref: "#/components/schemas/Comment"
               examples:
                 example-1:
                   value:
@@ -1112,8 +1181,8 @@ paths:
                       - id: 3xns3zxYBkY
                         title: 【#おかころ】わんにゃん深夜ライブ【オフコラボ】
                         type: stream
-                        published_at: '2020-10-19T06:02:44.000Z'
-                        available_at: '2020-10-19T07:01:32.135Z'
+                        published_at: "2020-10-19T06:02:44.000Z"
+                        available_at: "2020-10-19T07:01:32.135Z"
                         duration: 4036
                         status: past
                         songcount: 3
@@ -1121,11 +1190,11 @@ paths:
                           id: UChAnqc_AY5_I3Px5dig3X1Q
                           name: Korone Ch. 戌神ころね
                           type: vtuber
-                          photo: 'https://yt3.ggpht.com/ytc/AAUvwnj7QwmJ9YhyKY-9SkOKhKIzTKDMJp0HX2vAdQUVdw=s800-c-k-c0x00ffffff-no-rj'
+                          photo: "https://yt3.ggpht.com/ytc/AAUvwnj7QwmJ9YhyKY-9SkOKhKIzTKDMJp0HX2vAdQUVdw=s800-c-k-c0x00ffffff-no-rj"
                           english_name: Inugami Korone
                         comments:
                           - comment_key: UgzdW0dndnSxBe71_Zp4AaABAg
-                            message: 'Okayu''s solo at 9:05 of Lemon was soooo good that even Korone was taking it all in. This has been a great day to start the week. From Coco & Haachama returning, Sui-chan''s magnificent FREE FREE concert, to everyone showing their idol prowess with so many singing streams. This is what Hololive is all about & I''m so proud to be apart of all this right here & now.'
+                            message: "Okayu's solo at 9:05 of Lemon was soooo good that even Korone was taking it all in. This has been a great day to start the week. From Coco & Haachama returning, Sui-chan's magnificent FREE FREE concert, to everyone showing their idol prowess with so many singing streams. This is what Hololive is all about & I'm so proud to be apart of all this right here & now."
                           - comment_key: UgwCZ5ywJxmuc1TlniV4AaABAg
                             message: "0:46 KORONE NOISES\r\n1:04 1. TOUCH / タッチ\r\n4:31 [MC1]\r\n6:19 2. Lemon\r\n10:36 [MC2]\r\n15:54 3. Racing into the Night (YORU NI KAKERU) / 夜に駆ける\r\n20:21 [MC3]\r\n23:37 4. SHIN TAKARAJIMA / 新宝島\r\n28:38 [MC4]\r\n33:10 5. ROKI / ロキ\r\n37:21 [MC5] & Hakujitsu / 白日\r\n43:50 6. Genesis of Aquarion / 創聖のアクエリオン\r\n48:32 [MC6]\r\n49:40 7. LION / ライオン\r\n54:40 [MC7] & Curry-Meshi in Miracle / カレーメシ・イン・ミラクル\r\n57:10 8. if... OKAYU SINGING & KORONE RAP\r\n1:01:00 9. if... KORONE SINGING & OKAYU RAP\r\n1:04:39 10. if... OKAYU SINGING & KORONE RAP"
                           - comment_key: Ugz0aAkvJ23V2e9AO9h4AaABAg
@@ -1135,7 +1204,7 @@ paths:
                               42:40 白日
                               57:11 if..おかゆ:歌 ころね:ラップ
                           - comment_key: UgzONJ8Et-Br1-MXv-Z4AaABAg
-                            message: '9:05 best okayu vocal..  this is third time she stream lemon..  she become more more better.. '
+                            message: "9:05 best okayu vocal..  this is third time she stream lemon..  she become more more better.. "
                           - comment_key: UgwLuffiGjkAqMdAd8F4AaABAg
                             message: "おかころライブ本当に楽しくて最高すぎた...ありがとう....!!\n\nmy memo &set list\n00:47 開始\r\n01:05 \U0001F3B6タッチ / Touch / 岩崎良美\r\n06:19 \U0001F3B6レモン / Lemon / 米津玄師\r\n12:33 歌プリの話\r\n13:32 ラブライブの話\r\n15:38 喉の調節\r\n15:52 \U0001F3B6夜に駆ける / Racing into the Night  / YOASOBI\r\n20:45 セトリ作り\r\n22:56 歌詞を分けておいてくれたころさん\r\n23:38 \U0001F3B6新宝島 / Shin Takarajima / サカナクション\r\n - 26:01 間奏かわいい\r\n30:41 それは本当におかゆなのかな?\r\n33:10 \U0001F3B6ロキ / Roki / みきとP\r\n - 35:28 きゅーん\r\n39:53 おかゆが好きなころねまま\n42:40 \U0001F3B5白日 / Hakujitsu / King Gnu(ちょっとだけ)\r\n43:50 \U0001F3B6創聖のアクエリオン / Genesis of Apuarion / AKINO\r\n49:36 \U0001F3B6ライオン / Lion / May'n ・ 中島愛\r\n54:40 肩を!?\r\n57:10 \U0001F3B6if... / DA PUMP (ころラップver. / Korone's Rap)\r\n-1:01:01 \U0001F3B6if... / DA PUMP (おかラップver. / Okayu's Rap)\r\n-1:04:39 \U0001F3B6on more!"
                           - comment_key: UgxFPB8C69GToy0PIMN4AaABAg
@@ -1219,7 +1288,7 @@ paths:
 
                               ころさんのラップ好きすぎる
                           - comment_key: UgyVojylYdW8LEo_F6F4AaABAg
-                            message: '6:16 Super Duper LIT Lemon Cover'
+                            message: "6:16 Super Duper LIT Lemon Cover"
                           - comment_key: Ugy1P9__oigsxJ5Ilg54AaABAg
                             message: "0:46 KORONE NOISES\r\n1:04 1. TOUCH / タッチ\r\n4:31 [MC1]\r\n6:19 2. Lemon\r\n10:36 [MC2]\r\n15:54 3. Racing into the Night (YORU NI KAKERU) / 夜に駆ける\r\n20:21 [MC3]\r\n23:37 4. SHIN TAKARAJIMA / 新宝島\r\n28:38 [MC4]\r\n33:10 5. ROKI / ロキ\r\n37:21 [MC5] & Hakujitsu / 白日\r\n43:50 6. Genesis of Aquarion / 創聖のアクエリオン\r\n48:32 [MC6]\r\n49:40 7. LION / ライオン\r\n54:40 [MC7] & Curry-Meshi in Miracle / カレーメシ・イン・ミラクル\r\n57:10 8. if... OKAYU SINGING & KORONE RAP\r\n1:01:00 9. if... KORONE SINGING & OKAYU RAP\r\n1:04:39 10. if... OKAYU SINGING & KORONE RAP"
       description: 'Flexible endpoint to search for comments in videos fufilling multiple conditions. Descriptions with "any" implies an OR condition, and "all" implies a AND condition.'
@@ -1227,7 +1296,7 @@ paths:
         content:
           application/json:
             schema:
-              description: ''
+              description: ""
               type: object
               x-examples:
                 example-1:
@@ -1260,7 +1329,7 @@ paths:
                   default: newest
                 lang:
                   type: array
-                  description: 'If set, will filter clips to only show clips with these langs + all vtuber streams (provided `target` is not set to filter out streams)'
+                  description: "If set, will filter clips to only show clips with these langs + all vtuber streams (provided `target` is not set to filter out streams)"
                   example:
                     - en
                     - ja
@@ -1301,7 +1370,7 @@ paths:
                     type: string
                 org:
                   type: array
-                  description: 'Videos of channels in any of the specified orgs, or clips that involve a channel in the specified org.'
+                  description: "Videos of channels in any of the specified orgs, or clips that involve a channel in the specified org."
                   example:
                     - Hololive
                     - Nijisanji
@@ -1309,7 +1378,7 @@ paths:
                     type: string
                 paginated:
                   type: boolean
-                  description: 'If set at all, responds with total and items wrapping the array of objects'
+                  description: "If set at all, responds with total and items wrapping the array of objects"
                 offset:
                   type: number
                 limit:
@@ -1342,7 +1411,7 @@ paths:
                   paginated: true
                   offset: 0
                   limit: 30
-        description: ''
+        description: ""
 security:
-  - STOPLIGHT: []
+  - ApiKeyAuth: []
 x-internal: false
