@@ -7,7 +7,35 @@ info:
 
     Please consider joining our Discord Server for service downtime announcements
 
-    ![Discord Shield](https://discordapp.com/api/guilds/796190073271353385/widget.png?style=shield)
+    ![Discord Shield](https://discordapp.com/api/guilds/796190073271353385/widget.png?style=banner2)
+
+    # Holodex API Documentation
+
+    This is API Documentation for Public Accessible API powering [holodex.net](http://holodex.net)
+
+    **[Get Started W/ Holodex API](#section/Getting-Started)**
+
+    > To properly secure your API Access (and prevent being blocked by our service), please log into Holodex and acquire a API KEY via the Account Settings page.
+    > In order to reliably access the API and prevent rate lockouts or CORS issues, please set the API KEY in every single request using the header `X-APIKEY`
+
+
+    #### With Holodex, you can:
+
+    - Get quick updates on who is live and who is scheduled to be live, for Youtube vtubers in the Holodex platform.
+    - Access and navigate the clips, channels, streams, and relationships tracked by Holodex backend crawler.
+    - Access Holodex's stream and clip references to see which subbers clipped a particular stream.
+
+    ### Helpful Links
+    -----
+
+    [Holodex Github / Issues / Project Management](https://github.com/RiceCakess/Holodex)
+
+    [Develop and Chat with us on Discord!](https://discord.gg/A24AbzgvRJ)
+
+    [Follow us on Twitter!](https://twitter.com/holodex)
+
+    [License](#section/LICENSE)
+
 
     # Getting Started
 
