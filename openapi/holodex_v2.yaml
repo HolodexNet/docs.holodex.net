@@ -170,6 +170,58 @@ components:
           type: boolean
         description:
           type: string
+    ChannelWithGroup:
+      type: object
+      properties:
+        id:
+          type: string
+        name:
+          type: string
+        english_name:
+          type: string
+          nullable: true
+        type:
+          type: string
+          enum:
+            - vtuber
+            - subber
+        org:
+          type: string
+          nullable: true
+        group:
+          type: string
+          nullable: true
+        photo:
+          type: string
+          nullable: true
+        banner:
+          type: string
+          nullable: true
+        twitter:
+          type: string
+          nullable: true
+        video_count:
+          type: string
+          nullable: true
+        subscriber_count:
+          type: string
+          nullable: true
+        view_count:
+          type: string
+          nullable: true
+        clip_count:
+          type: string
+          nullable: true
+        lang:
+          type: string
+          nullable: true
+        published_at:
+          type: string
+          format: date-time
+        inactive:
+          type: boolean
+        description:
+          type: string
     Video:
       type: object
       x-examples: {}
@@ -979,7 +1031,7 @@ paths:
                 type: array
                 description: Array of Channels up to `limit` count.
                 items:
-                  $ref: "#/components/schemas/Channel"
+                  $ref: "#/components/schemas/ChannelWithGroup"
       operationId: get-channels
       description: ""
       parameters:
