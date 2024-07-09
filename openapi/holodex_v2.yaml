@@ -28,7 +28,7 @@ info:
     ### Helpful Links
     -----
 
-    [Holodex Github / Issues / Project Management](https://github.com/RiceCakess/Holodex)
+    [Holodex Github / Issues / Project Management](https://github.com/HolodexNet/Holodex)
 
     [Develop and Chat with us on Discord!](https://discord.gg/A24AbzgvRJ)
 
@@ -133,6 +133,7 @@ components:
           enum:
             - vtuber
             - subber
+            - external
         org:
           type: string
           nullable: true
@@ -149,16 +150,16 @@ components:
           type: string
           nullable: true
         video_count:
-          type: string
+          type: integer
           nullable: true
         subscriber_count:
-          type: string
+          type: integer
           nullable: true
         view_count:
-          type: string
+          type: integer
           nullable: true
         clip_count:
-          type: string
+          type: integer
           nullable: true
         lang:
           type: string
@@ -166,10 +167,27 @@ components:
         published_at:
           type: string
           format: date-time
+        created_at:
+          type: string
+          format: date-time
         inactive:
           type: boolean
         description:
           type: string
+        twitch:
+          type: string
+          nullable: true
+        top_topics:
+          type: array
+        yt_handle:
+          type: array
+        yt_name_history:
+          type: array
+        extra_ids:
+          type: array
+          nullable: true
+        index_all:
+          type: boolean
     ChannelWithGroup:
       type: object
       properties:
@@ -185,6 +203,7 @@ components:
           enum:
             - vtuber
             - subber
+            - external
         org:
           type: string
           nullable: true
@@ -201,16 +220,16 @@ components:
           type: string
           nullable: true
         video_count:
-          type: string
+          type: integer
           nullable: true
         subscriber_count:
-          type: string
+          type: integer
           nullable: true
         view_count:
-          type: string
+          type: integer
           nullable: true
         clip_count:
-          type: string
+          type: integer
           nullable: true
         lang:
           type: string
@@ -218,10 +237,27 @@ components:
         published_at:
           type: string
           format: date-time
+        created_at:
+          type: string
+          format: date-time
         inactive:
           type: boolean
         description:
           type: string
+        twitch:
+          type: string
+          nullable: true
+        top_topics:
+          type: array
+        yt_handle:
+          type: array
+        yt_name_history:
+          type: array
+        extra_ids:
+          type: array
+          nullable: true
+        index_all:
+          type: boolean
     Video:
       type: object
       x-examples: {}
@@ -235,9 +271,10 @@ components:
           enum:
             - stream
             - clip
+            - placeholder
         topic_id:
           type: string
-          description: "corresponds to a Topic ID, Videos of type `clip` cannot not have topic. Streams may or may not have topic."
+          description: "corresponds to a Topic ID, Videos of type `clip` cannot not have topic. Streams and Placeholders may or may not have topic."
           example: minecraft
           nullable: true
         published_at:
@@ -247,10 +284,10 @@ components:
         available_at:
           type: string
           format: date-time
-          description: "Takes on the first non-null value of end_actual, start_actual, start_scheduled, or published_at"
+          description: "Takes on the first non-null value of `end_actual`, `start_actual`, `start_scheduled`, or `published_at`"
         duration:
           type: integer
-          description: Duration of the video in seconds
+          description: Duration of the video in seconds. This is always 0 for upcoming livestreams and premieres.
         status:
           type: string
           enum:
@@ -260,26 +297,26 @@ components:
             - past
             - missing
         start_scheduled:
-          description: Included when includes contains 'live_info'
+          description: Included when `include` contains 'live_info'
           type: string
           format: date-time
           nullable: true
         start_actual:
-          description: Included when includes contains 'live_info'
+          description: Included when `include` contains 'live_info'
           type: string
           format: date-time
           nullable: true
         end_actual:
-          description: Included when includes contains 'live_info'
+          description: Included when `include` contains 'live_info'
           type: string
           format: date-time
           nullable: true
         live_viewers:
-          description: Included when includes contains 'live_info'
+          description: Included when `include` contains 'live_info'
           type: integer
           nullable: true
         description:
-          description: Included when includes contains 'description'
+          description: Included when `include` contains 'description'
           type: string
         songcount:
           type: number
@@ -301,6 +338,7 @@ components:
           enum:
             - vtuber
             - subber
+            - external
         photo:
           type: string
     VideoWithChannel:
@@ -318,31 +356,31 @@ components:
           properties:
             clips:
               type: array
-              description: Included when 'includes' contains 'clips'
+              description: Included when `include` contains 'clips'
               nullable: true
               items:
                 $ref: "#/components/schemas/VideoWithChannel"
             sources:
               type: array
-              description: Included when 'includes' contains 'sources'
+              description: Included when `include` contains 'sources'
               nullable: true
               items:
                 $ref: "#/components/schemas/VideoWithChannel"
             refers:
               type: array
-              description: Included when 'includes' contains 'refers'
+              description: Included when `include` contains 'refers'
               nullable: true
               items:
                 $ref: "#/components/schemas/VideoWithChannel"
             simulcasts:
               type: array
-              description: Included when 'includes' contains 'simulcasts'
+              description: Included when `include` contains 'simulcasts'
               nullable: true
               items:
                 $ref: "#/components/schemas/VideoWithChannel"
             mentions:
               type: array
-              description: "VTubers mentioned by this video, Included when 'includes' contains 'mentions'"
+              description: "VTubers mentioned by this video, Included when `include` contains 'mentions'"
               nullable: true
               items:
                 allOf:
@@ -354,8 +392,8 @@ components:
                         description: Org of the Mentioned Channel
                         nullable: true
             songs:
-              type: number
-              description: Number of songs
+              type: array
+              description: "Metadata for songs tagged in this video, Included when `include` contains 'songs'"
               nullable: true
       x-examples:
         example-1: {}
@@ -370,11 +408,12 @@ components:
         enum:
           - stream
           - clip
+          - placeholder
     videoLang:
       name: lang
       in: query
       required: false
-      description: "A comma separated list of language codes to filter channels/clips, official streams do not follow this parameter"
+      description: "A comma separated list of language codes to filter channels/clips, vtuber streams do not follow this parameter"
       schema:
         type: string
         example: "en,ja"
@@ -445,7 +484,7 @@ components:
       schema:
         type: integer
         default: 25
-        maximum: 50
+        maximum: 100
     offset:
       name: offset
       in: query
@@ -519,7 +558,7 @@ components:
       required: false
       schema:
         type: string
-      description: "A single Youtube Video ID. If Specified, only this video can be returned (may be filtered out by other conditions though)"
+      description: "Youtube Video IDs, comma separated. If specified, only these videos can be returned (may be filtered out by other conditions though)"
     channelType:
       name: type
       in: query
