@@ -148,6 +148,9 @@ components:
         twitter:
           type: string
           nullable: true
+        twitch:
+          type: string
+          nullable: true
         video_count:
           type: string
           nullable: true
@@ -198,6 +201,9 @@ components:
           type: string
           nullable: true
         twitter:
+          type: string
+          nullable: true
+        twitch:
           type: string
           nullable: true
         video_count:
@@ -898,6 +904,7 @@ paths:
                     subscriber_count: "163000"
                     thumbnail: "https://yt3.ggpht.com/ytc/AAUvwnjZ3i5csnFMZqorfAHE7JUuD8VdWJDcJbwt2YiK=s88-c-k-c0x00ffffff-no-rj"
                     twitter: null
+                    twitch: null
                     type: subber
                     updated_at: "2021-05-13T15:00:05.766Z"
                     video_count: "1586"
